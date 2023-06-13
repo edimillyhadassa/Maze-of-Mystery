@@ -4,6 +4,7 @@
 	import Sobre from './Sobre.svelte'
 	import Menu from './Menu.svelte'
 	import Ajuda from './Ajuda.svelte'
+	
 
 	// importa um "writable" que funciona como uma variável global, todos os módulos que a importarem poderão ver o seu valor
 	import { estado } from './Estado.js'
