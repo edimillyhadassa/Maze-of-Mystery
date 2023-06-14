@@ -5,12 +5,12 @@ html, body {
 }
 
 body {
-	color: #333;
+	color: #a06464;
 	margin: 0;
 	padding: 8px;
 	box-sizing: border-box;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	background-color: rgb(138, 138, 138);
+	background-color: rgb(163, 165, 131);
 	text-align: center;	
 }
 
@@ -73,20 +73,24 @@ button:focus {
 }
 
 button.menu {
-	list-style-type: none;
-	font-size: 20px;
-	margin: auto;
-	margin-bottom: 5px;
-	border-style: solid;
-	border-width: 3px;
-	width: 20%;
-	padding: 5px;
+  font-family: 'times new roman';
+  font-weight: bold;
+  color: #000000 !important;
+  font-size: 19px;
+  text-shadow: 1px 2px 1px #C5E8ED;
+  padding: 15px 70px;
+  border-radius: 40px;
+  border: 5px solid #000000;
+  background: #FFDC4F;
+  background: linear-gradient(to top, #FFDC4F, #FFFF66);
+  margin: 15px
+
 }
 
 button.menu:hover { 
-	background-color: lightgrey;
-	cursor: pointer;
+color: #000000 !important;
+background: #C2EDF2;
+background: linear-gradient(to top, #C2EDF2, #D6EDEE);
+cursor: pointer;
 }
-.nham{
-  font-size: 400%;
-}
+	

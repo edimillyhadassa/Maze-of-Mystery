@@ -25,5 +25,5 @@
 {:else if $estado === 'jogar'}
 	<Jogo/>
 {:else if $estado === 'ajuda'}
-	<Ajuda />
+     <Ajuda/>
 {/if}

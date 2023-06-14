@@ -7,20 +7,24 @@
 	import { trocarEstadoDoJogo } from './Estado.js'
 </script>
 
-<h1>
-	Maze of Mystery
+<h1 class='menu-titulo'>
+	<div>
+	<span>Maze </span> 
+	<span>of </span>
+	<span>Mystery </span> 
+	</div>
 </h1>
+
+
+<button class='menu' on:click={() => trocarEstadoDoJogo('Ajuda')}>
+	Ajuda
+</button>
 
 <button class='menu' on:click={() => trocarEstadoDoJogo('jogar')}>
 	Jogar
 </button>
 
-<br />
 
 <button class='menu' on:click={() => trocarEstadoDoJogo('sobre')}>
 	Sobre
-</button>
-
-<button class='menu' on:click={() => trocarEstadoDoJogo('ajuda')}>
-	ajuda
 </button>
