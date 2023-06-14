@@ -1,8 +1,7 @@
 .menu-titulo{
     font-size: 700%;
-    font-family: Luminari, fantasy ;
-    text-shadow: white;
-    color: rgb(65, 55, 55);
+    font-family:fonte-jogo;
+    color:  #78e6ee;
     border-style: black;
     justify-content: center;
     align-items: center;
