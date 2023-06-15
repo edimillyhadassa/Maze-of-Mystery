@@ -15,11 +15,11 @@
 	</div>
 </h1>
 
-<button class='menu' on:click={() => trocarEstadoDoJogo('Ajuda')}>
+<button class='menu' on:click={() => trocarEstadoDoJogo('ajuda')}>
 	Ajuda
 </button>
 
-<button class='menu' on:click={() => trocarEstadoDoJogo('jogar')}>
+<button class='menu' on:click={() => trocarEstadoDoJogo('game')}>
 	Jogar
 </button>
 

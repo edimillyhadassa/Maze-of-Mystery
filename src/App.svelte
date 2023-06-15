@@ -1,6 +1,6 @@
 <script>
 	// importa os componentes que representam os elementos gráficos do jogo
-	import Jogo from './Jogar.svelte'
+	import Game from './Game.svelte'
 	import Sobre from './Sobre.svelte'
 	import Menu from './Menu.svelte'
 	import Ajuda from './Ajuda.svelte'
@@ -23,8 +23,8 @@
 	<Menu/>
 {:else if $estado === 'sobre'}
 	<Sobre/>
-{:else if $estado === 'jogar'}
-	<Jogo/>
+{:else if $estado === 'game'}
+	<Game/>
 {:else if $estado === 'ajuda'}
 	<Ajuda/>
 {/if}
