@@ -1,4 +1,24 @@
-img {
-    max-width:20%;
-    height:auto;
+
+.titulo-sobre{
+    font-family: ancientmodern ;
+    font-size: 500%;
+    color:#eed278;
+    margin: 45px;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+
+}
+a:link{
+    color: #eed278;
+    font-family: ancientmodern;
+    font-size: 35px;
+    
+}
+a:visited{
+    color: #eed278;
+}
+a:hover{
+    color: #756739;
+
 }

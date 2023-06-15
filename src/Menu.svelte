@@ -14,9 +14,6 @@
 	<span>Mystery </span> 
 	</div>
 </h1>
-<div class=video>
-   <source src=".imagens/plano-de-fundo-mp4" type="video">
-</div>
 
 <button class='menu' on:click={() => trocarEstadoDoJogo('Ajuda')}>
 	Ajuda

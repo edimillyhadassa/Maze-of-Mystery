@@ -1,7 +1,11 @@
-p{
-    color: white;
-    font-size: 20px;
-}
-.ajuda{
+.titulo-ajuda{
     font-size: 500%;
+    font-family: zelda;
+    color:wheat;
+
+}
+p{
+    font-family: zelda;
+    font-size: 30px;
+    color: wheat;
 }

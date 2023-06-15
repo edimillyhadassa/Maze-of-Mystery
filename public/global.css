@@ -13,9 +13,9 @@ body {
 	text-align: center;	
 	justify-content: center;
 	align-items: center;
-	background-image: url('images/caverna.gif');
+	background-image: url('images/caverna-dungeon.gif');
     background-size: cover; 
-    height: 100vh;
+    height: 75vh;
     padding:0;
     margin:0;
 	
@@ -82,34 +82,21 @@ button:focus {
 button.menu {
   font-family: 'times new roman';
   font-weight: bold;
-  color: #000000 !important;
+  color: #0a0909 ;
   font-size: 19px;
   text-shadow: 1px 2px 1px #C5E8ED;
   padding: 15px 70px;
   border-radius: 40px;
   border: 5px solid #000000;
   background: #FFDC4F;
-  background: linear-gradient(to top, #b8c5c2, #70a3a8);
-  margin: 15px
+  background: linear-gradient(to top, #f0b30d, #e8eb5a);
+   margin: 35px
 
 }
 
 button.menu:hover { 
-color: #000000 !important;
+color: #000000;
 background: #C2EDF2;
 background: linear-gradient(to top, #C2EDF2, #D6EDEE);
 cursor: pointer;
-}
-	
-.video{
-	position: fixed; 
-	right: 0; 
-	bottom: 0;
-	min-width: 100%; 
-	min-height: 100%;
-	width: auto; 
-	height: auto; 
-	z-index: -1000;
-	background: url(images/plano-de-fundo.mp4) no-repeat;
-	background-size: cover; 
 }

@@ -1,11 +1,10 @@
 .menu-titulo{
     font-size: 700%;
-    font-family:fonte-jogo;
-    color:  #78e6ee;
+    font-family: zelda  ;
+    color:  #eed278;
     border-style: black;
     justify-content: center;
     align-items: center;
-    margin:100px
-
- 
+    margin:150px 
 }
+
