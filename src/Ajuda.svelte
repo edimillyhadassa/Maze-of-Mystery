@@ -10,7 +10,7 @@
 	Ajuda
 	</h1>
 
-	<p>oiooooooooooooooooooooooooooooooooooooooooooooooo</p>
+	<p>SE VIRA</p>
 	  
 	
 

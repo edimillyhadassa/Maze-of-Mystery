@@ -1,4 +1,9 @@
+<svelte:head>
+	<link rel="stylesheet" href="/styles/game.css">
+</svelte:head>
+
 <script>
+  	import VoltarMenu from './VoltarMenu.svelte'
     let maze = [
       [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
@@ -47,30 +52,9 @@
   
       playerPosition = { x, y };
     }
-        
   </script>
         <svelte:window on:keydown={movePlayer}/>
-  <style>
-    .maze {
-      display: grid;
-      grid-template-columns: repeat(17, 40px);
-      grid-template-rows: repeat(23, 40px);
-      gap: 2px;
-      background-color: #000;
-    }
-  
-    .maze-cell {
-      background-color: #fff;
-    }
-  
-    .wall {
-      background-color: #333;
-    }
-  
-    .player {
-      background-color: #00f;
-    }
-  </style>
+ 
   
   <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
   <div class="maze" on:keydown={movePlayer}>
@@ -84,4 +68,7 @@
       {/each}
     {/each}
   </div>
-  
+
+
+   
+  <VoltarMenu/>

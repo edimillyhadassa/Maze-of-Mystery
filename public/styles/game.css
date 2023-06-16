@@ -1,0 +1,20 @@
+
+    .maze {
+      display: grid;
+      grid-template-columns: repeat(17, 40px);
+      grid-template-rows: repeat(23, 40px);
+      gap: 2px;
+      justify-content:center ;
+    }
+  
+    .maze-cell {
+      background-color: #fff;
+    }
+  
+    .wall {
+      background-color: #333;
+    }
+  
+    .player {
+      background-color: #00f;
+    }

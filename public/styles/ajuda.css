@@ -1,11 +1,14 @@
 .titulo-ajuda{
     font-size: 500%;
     font-family: zelda;
-    color:wheat;
+    color:#eed278;
+    padding: 50px;
+    margin: 20px;
+    justify-content: center;
 
 }
 p{
     font-family: zelda;
     font-size: 30px;
-    color: wheat;
+    color: #eed278;
 }

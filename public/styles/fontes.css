@@ -1,16 +1,5 @@
-@font-face {
-    font-family: ancientmodern ;
-    src: url(./AncientModernTales-a7Po.ttf);
-}
-@font-face {
-    font-family: fire;
-    src: url(./BreatheFire-65pg.ttf);
-}
-@font-face {
-    font-family:fonte-jogo;
-    src: url(./fonte-jogo.ttf);
-}
+
 @font-face {
     font-family: zelda ;
-    src: url(./TheWildBreathOfZelda-15Lv.ttf);
+    src: url(/public/fontes/zelda.ttf);
 }
