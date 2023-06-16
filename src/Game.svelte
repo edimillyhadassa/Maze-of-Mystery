@@ -4,6 +4,7 @@
 
 <script>
   	import VoltarMenu from './VoltarMenu.svelte'
+    import {proximaFase} from './mudarFase.js';
     let maze = [
       [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
@@ -25,29 +26,40 @@
       [1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
       [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
       [1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1],
-      [1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0],
+      [1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3],
       [1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1],
       [1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
       [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
-  
+    
     let playerPosition = {
       x: 0,
       y: 1
     };
+    function chegada() {
+      let { x, y } = playerPosition;
+      if(maze[y][x] == 3){
+        alert("vc ganho");
+        proximaFase()
+      }
+    }
   
     function movePlayer(event) {
       const { key } = event;
       let { x, y } = playerPosition;
   
-      if (key === "ArrowUp" && maze[y - 1][x] === 0) {
+      if (key === "ArrowUp" && (maze[y - 1][x] === 0 || maze[y - 1][x] === 3) ) {
         y -= 1;
-      } else if (key === "ArrowDown" && maze[y + 1][x] === 0) {
+        chegada()
+      } else if (key === "ArrowDown" && (maze[y + 1][x] === 0 || maze[y + 1][x] === 3 )){
         y += 1;
-      } else if (key === "ArrowLeft" && maze[y][x - 1] === 0) {
+        chegada()
+      } else if (key === "ArrowLeft" && (maze[y][x - 1] === 0 || maze[y][x - 1] === 3)){
         x -= 1;
-      } else if (key === "ArrowRight" && maze[y][x + 1] === 0) {
+        chegada()
+      } else if (key === "ArrowRight" && (maze[y][x + 1] === 0 || maze[y][x + 1] === 3)) {
         x += 1;
+        chegada()
       }
   
       playerPosition = { x, y };
@@ -68,7 +80,6 @@
       {/each}
     {/each}
   </div>
-
 
    
   <VoltarMenu/>

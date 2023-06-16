@@ -2,19 +2,22 @@
     .maze {
       display: grid;
       grid-template-columns: repeat(17, 40px);
-      grid-template-rows: repeat(23, 40px);
+      grid-template-rows: repeat(24, 40px);
       gap: 2px;
       justify-content:center ;
     }
   
     .maze-cell {
-      background-color: #fff;
+      background-image: url('/images/chao.jpeg');
+      background-size: 100%;
     }
   
     .wall {
-      background-color: #333;
+      background-image: url('/images/parede.jpeg');
+      background-size: 100%;
     }
   
     .player {
-      background-color: #00f;
+      background-image: url('/images/thomas.gif');
+      background-size: 100%;
     }
