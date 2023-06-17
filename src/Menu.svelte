@@ -1,5 +1,6 @@
 <svelte:head>
 	<link rel="stylesheet" href="/styles/menu.css">
+	<link href="https://fonts.cdnfonts.com/css/the-wild-breath-of-zelda" rel="stylesheet">
 </svelte:head>
 
 <script>
@@ -16,7 +17,7 @@
 </h1>
 
 <button class='menu' on:click={() => trocarEstadoDoJogo('ajuda')}>
-	Ajuda
+	Como Jogar?
 </button>
 
 <button class='menu' on:click={() => trocarEstadoDoJogo('game')}>
@@ -25,5 +26,8 @@
 
 
 <button class='menu' on:click={() => trocarEstadoDoJogo('sobre')}>
-	Sobre
+	Créditos
 </button>
+
+
+

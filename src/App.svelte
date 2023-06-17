@@ -28,3 +28,4 @@
 {:else if $estado === 'ajuda'}
 	<Ajuda/>
 {/if}
+

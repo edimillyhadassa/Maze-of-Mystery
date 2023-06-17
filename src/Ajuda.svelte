@@ -7,7 +7,7 @@
 </script>
 
 <h1 class= titulo-ajuda>
-	Ajuda
+	Como jogar?
 	</h1>
 
 	<p>SE VIRA</p>

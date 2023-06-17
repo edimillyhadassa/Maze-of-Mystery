@@ -1,10 +1,12 @@
 <svelte:head>
 	<link rel="stylesheet" href="/styles/game.css">
 </svelte:head>
-
 <script>
   	import VoltarMenu from './VoltarMenu.svelte'
     import {proximaFase} from './mudarFase.js';
+    import swal from 'sweetalert';
+
+
     let maze = [
       [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
@@ -26,8 +28,8 @@
       [1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
       [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
       [1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1],
-      [1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3],
-      [1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1],
+      [1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0],
+      [1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1],
       [1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
       [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
@@ -39,7 +41,11 @@
     function chegada() {
       let { x, y } = playerPosition;
       if(maze[y][x] == 3){
-        alert("vc ganho");
+        swal({
+  title: "VOCÊ VENCEU!",
+  text: "Agora ajude Thomas na próxima fase!",
+  icon: "success",
+});
         proximaFase()
       }
     }

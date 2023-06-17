@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="/styles/sobre.css" />
 </svelte:head>
 <main>
-	<h1 class="titulo-sobre">Sobre</h1>
+	<h1 class="titulo-sobre">Créditos</h1>
 
 	<div class="infos">
 		<a href="https://github.com/Alysonalves1" target="_blank">
@@ -31,3 +31,4 @@
 	</div>
 	<VoltarMenu />
 </main>
+

@@ -1,10 +1,11 @@
 .menu-titulo{
     font-size: 700%;
-    font-family: zelda  ;
+    font-family: 'The Wild Breath of Zelda', sans-serif;
     color:  #eed278;
     border-style: black;
     justify-content: center;
     align-items: center;
     margin:150px 
 }
+@import url('https://fonts.cdnfonts.com/css/the-wild-breath-of-zelda');
 
