@@ -24,10 +24,7 @@
 	Jogar
 </button>
 
-
 <button class='menu' on:click={() => trocarEstadoDoJogo('sobre')}>
 	Créditos
 </button>
-
-
 

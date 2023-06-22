@@ -37,10 +37,10 @@
     let playerPosition = {
       x: 0,
       y: 1
-    };
+    }; 
     function chegada() {
       let { x, y } = playerPosition;
-      if(maze[y][x] == 3){
+      if(maze[y][x] === 3){
         swal({
   title: "VOCÊ VENCEU!",
   text: "Agora ajude Thomas na próxima fase!",
@@ -49,6 +49,7 @@
         proximaFase()
       }
     }
+    
   
     function movePlayer(event) {
       const { key } = event;
@@ -87,5 +88,5 @@
     {/each}
   </div>
 
-   
+  
   <VoltarMenu/>

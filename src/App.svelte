@@ -4,6 +4,7 @@
 	import Sobre from './Sobre.svelte'
 	import Menu from './Menu.svelte'
 	import Ajuda from './Ajuda.svelte'
+	import Historia from './Historia.svelte'
 
 
 	// importa um "writable" que funciona como uma variável global, todos os módulos que a importarem poderão ver o seu valor
@@ -27,5 +28,7 @@
 	<Game/>
 {:else if $estado === 'ajuda'}
 	<Ajuda/>
+{:else if $estado === 'historia'}
+	<Historia/>
 {/if}
 

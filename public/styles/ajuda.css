@@ -3,12 +3,50 @@
     font-family: zelda;
     color:#eed278;
     padding: 50px;
-    margin: 20px;
+    margin: 10px;
     justify-content: center;
 
 }
 p{
     font-family: zelda;
     font-size: 30px;
-    color: #eed278;
+    color:#eed278;
 }
+img{ 
+    justify-content: center;
+    margin:0px;
+    padding: 15px;
+    background-color: transparent;
+    right: 15px;
+    
+}
+   .texto{
+    background-color:#1D3825;
+    justify-content: center;
+    max-width: 980px;
+    max-height: 400px;
+    padding: 20px;
+    height: 400px;
+    position: relative;
+    overflow-y: scroll;
+   margin-left: auto;
+   margin-right: auto;
+  }
+
+::-webkit-scrollbar {
+    width: 8px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #beb4b4; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #eed278;; 
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+  }
+  

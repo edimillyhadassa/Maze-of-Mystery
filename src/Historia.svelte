@@ -4,7 +4,7 @@
 </svelte:head>
 
 <script>
-	import VoltarMenu from "./VoltarMenu.svelte";
+	import VoltarMenu from "./VoltarMenu.svelte";	
 </script>
 <main>
 
@@ -17,12 +17,6 @@ Ao chegar ao local, percebe que esse labirinto era diferente de todos os outros 
 Thomas passou horas andando pelo labirinto, tentando encontrar uma saída. <br> Ele ficou desesperado e exausto, mas não conseguia desistir. Cada vez que ele chegava perto da saída, tinha mais uma parede na frente e ele era forçado a recuar.
 Guie Thomas nessa jornada e tente encontrar o caminho certo para chegar no final do labirinto.
 </p>
-<VoltarMenu/>
+
 </main>
-
-
-
-
-    
-
-
+<VoltarMenu/>

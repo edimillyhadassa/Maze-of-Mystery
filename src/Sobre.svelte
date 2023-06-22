@@ -8,6 +8,9 @@
 <main>
 	<h1 class="titulo-sobre">Créditos</h1>
 
+	<p><b>Somos alunos do IFPE-Campus Igarassu, estamos no 1º período do curso IPI e<br> 
+	tivemos a tarefa de construir um labirinto com o conhecimento adquirido <br> durante este semestre.</b> </p>
+
 	<div class="infos">
 		<a href="https://github.com/Alysonalves1" target="_blank">
 			Alyson Alves Pestana</a
