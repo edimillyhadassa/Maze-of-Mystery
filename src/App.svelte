@@ -1,6 +1,6 @@
 <script>
 	// importa os componentes que representam os elementos gráficos do jogo
-	import Game from './Game.svelte'
+	import AllGames from './AllGames.svelte'
 	import Sobre from './Sobre.svelte'
 	import Menu from './Menu.svelte'
 	import Ajuda from './Ajuda.svelte'
@@ -9,6 +9,7 @@
 
 	// importa um "writable" que funciona como uma variável global, todos os módulos que a importarem poderão ver o seu valor
 	import { estado } from './Estado.js'
+    import Game2 from './Game2.svelte';
 </script>
 
  <!-- Esta não é a melhor forma de criar rotas em um projeto.
@@ -25,7 +26,7 @@
 {:else if $estado === 'sobre'}
 	<Sobre/>
 {:else if $estado === 'game'}
-	<Game/>
+	<AllGames/>
 {:else if $estado === 'ajuda'}
 	<Ajuda/>
 {:else if $estado === 'historia'}

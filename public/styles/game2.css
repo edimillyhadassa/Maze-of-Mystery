@@ -1,18 +1,18 @@
 
-.maze2 {
+.maze {
     display: grid;
-    grid-template-columns: repeat(34, 20px);
-    grid-template-rows: repeat(31, 20px);
-    gap: 2px;
+    grid-template-columns: repeat(34, 40px);
+    grid-template-rows: repeat(31, 40px);
+    gap: 4px;
     justify-content:center ;
   }
 
-  .maze-cell2 {
+  .maze-cell {
     background-image: url('/images/chao.jpeg');
     background-size: 100%;
   }
 
-  .wall2 {
+  .wall {
     background-image: url('/images/parede.jpeg');
     background-size: 100%;
   }
