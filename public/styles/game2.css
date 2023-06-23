@@ -3,17 +3,17 @@
     display: grid;
     grid-template-columns: repeat(34, 40px);
     grid-template-rows: repeat(31, 40px);
-    gap: 4px;
+    gap: 2px;
     justify-content:center ;
   }
 
   .maze-cell {
-    background-image: url('/images/chao.jpeg');
+    background-image: url('/images/chao-mapa2.jpeg');
     background-size: 100%;
   }
 
   .wall {
-    background-image: url('/images/parede.jpeg');
+    background-image: url('/images/parede-mapa3.jpeg');
     background-size: 100%;
   }
 

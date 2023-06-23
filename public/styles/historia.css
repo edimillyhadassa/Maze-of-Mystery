@@ -1,0 +1,58 @@
+
+button.historia{
+    
+  font-family: 'times new roman';
+  font-weight: bold;
+  color: #0a0909 ;
+  font-size: 19px;
+  text-shadow: 1px 2px 1px #C5E8ED;
+  padding: 15px 70px;
+  border-radius: 40px;
+  border: 5px solid #000000;
+  background: #FFDC4F;
+  background: linear-gradient(to top, #f0b30d, #e8eb5a);
+  margin: 35px
+
+}
+button.historia:hover{
+color: #000000;
+background: #C2EDF2;
+background: linear-gradient(to top, #C2EDF2, #D6EDEE);
+cursor: pointer;
+
+}
+p{
+    font-family: zelda;
+    font-size: 30px;
+    color:#eed278;
+}
+.texto-hist{
+margin: 75px;
+background-color:#1D3825;
+justify-content: center;
+max-width: 980px;
+max-height: 400px;
+padding: 30px;
+height: 400px;
+position: relative;
+overflow-y: scroll;
+margin-left: auto;
+margin-right: auto;
+}
+
+::-webkit-scrollbar {
+width: 8px; 
+}
+
+::-webkit-scrollbar-track {
+background-color: #dbd5d5; 
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #eed278;; 
+border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background-color: #1D3825; 
+}

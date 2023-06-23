@@ -84,7 +84,8 @@
   <div>
     <Historia></Historia>
   </div>
-  <button on:click={() => {trocar = false}} > prox</button>
+
+  <button class='historia' on:click={() => {trocar = false}} >Próximo</button>
 </section>
 {:else}
 <section>
@@ -101,10 +102,7 @@
       {/each}
     {/each}
   </div>
-
-  
-  <VoltarMenu/>
-
+<VoltarMenu/>
 </section>
 {/if}
   
