@@ -1,9 +1,8 @@
-
 .maze {
     display: grid;
-    grid-template-columns: repeat(42, 32px);
-    grid-template-rows: repeat(50, 32px);
-    gap: 1px;
+    grid-template-columns: repeat(34, 40px);
+    grid-template-rows: repeat(31, 40px);
+    gap: 2px;
     justify-content:center ;
   }
 
@@ -13,7 +12,7 @@
   }
 
   .wall {
-    background-image: url('/images/parede-mapa2.jpeg');
+    background-image: url('/images/parede-mapa3.jpeg');
     background-size: 100%;
   }
 

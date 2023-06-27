@@ -4,7 +4,6 @@
 </svelte:head>
 
 <script>
-	import VoltarMenu from "./VoltarMenu.svelte";	
     import { proximoNivel } from "./mudarFase";
 </script>
 <main>
@@ -20,4 +19,4 @@
 
 </main>
 
-<VoltarMenu/>
+

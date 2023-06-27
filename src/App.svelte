@@ -9,7 +9,6 @@
 
 	// importa um "writable" que funciona como uma variável global, todos os módulos que a importarem poderão ver o seu valor
 	import { estado } from './Estado.js'
-    import Game2 from './Game2.svelte';
 </script>
 
  <!-- Esta não é a melhor forma de criar rotas em um projeto.
