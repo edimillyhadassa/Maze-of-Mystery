@@ -5,6 +5,7 @@
       grid-template-rows: repeat(24, 40px);
       gap: 2px;
       justify-content:center ;
+      background-color: rgba(0, 0, 0, 0.569);
     }
   
     .maze-cell {
@@ -28,4 +29,9 @@
       margin: 15px;
 
     }
- 
+    @import url('https://fonts.cdnfonts.com/css/the-wild-breath-of-zelda');
+
+    .over{
+      overflow: hidden;
+
+    }

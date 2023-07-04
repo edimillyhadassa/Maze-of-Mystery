@@ -2,23 +2,24 @@
 .maze {
     display: grid;
     grid-template-columns: repeat(42, 32px);
-    grid-template-rows: repeat(50, 32px);
+    grid-template-rows: repeat(51, 32px);
     gap: 1px;
     justify-content:center ;
+    background-color: rgba(0, 0, 0, 0.569);
   }
 
   .maze-cell {
-    background-image: url('/images/chao-mapa2.jpeg');
+    background-image: url('/images/chao-mapa3.jpeg');
     background-size: 100%;
   }
 
   .wall {
-    background-image: url('/images/parede-mapa3.jpeg');
+    background-image: url('/images/parede-mapa2.jpeg');
     background-size: 100%;
   }
 
   .player {
-    background-image: url('/images/thomas2.gif');
+    background-image: url('/images/thomas3.gif');
     background-size: 100%;
   }
   .nivel{
@@ -28,3 +29,4 @@
     margin: 15px;
 
   }
+  @import url('https://fonts.cdnfonts.com/css/the-wild-breath-of-zelda');

@@ -2,6 +2,9 @@
 	<link rel="stylesheet" href="/styles/game.css">
 </svelte:head>
 <h1 class='nivel'>Nível 1</h1>
+<link href="https://fonts.cdnfonts.com/css/the-wild-breath-of-zelda" rel="stylesheet">
+
+                
 <script>
   	import VoltarMenu from './VoltarMenu.svelte'
     import {proximaFase} from './mudarFase.js';
@@ -79,6 +82,7 @@
   </script>
         <svelte:window on:keydown={movePlayer}/>
  
+      
   
 {#if trocar}
 <section>
@@ -106,5 +110,6 @@
 <VoltarMenu/>
 </section>
 {/if}
+
   
   
