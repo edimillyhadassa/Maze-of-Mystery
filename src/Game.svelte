@@ -1,6 +1,7 @@
 <svelte:head>
 	<link rel="stylesheet" href="/styles/game.css">
 </svelte:head>
+<h1 class='nivel'>Nível 1</h1>
 <script>
   	import VoltarMenu from './VoltarMenu.svelte'
     import {proximaFase} from './mudarFase.js';

@@ -21,4 +21,11 @@
       background-image: url('/images/thomas-atual.gif');
       background-size: 100%;
     }
+    .nivel{
+      font-family: 'The Wild Breath of Zelda', sans-serif;
+      color:  #eed278;
+      font-size: 300%;
+      margin: 15px;
+
+    }
  
