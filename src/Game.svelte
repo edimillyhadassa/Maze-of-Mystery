@@ -57,7 +57,6 @@
       })
       }
     }
-    
   
     function movePlayer(event) {
       const { key } = event;
@@ -78,7 +77,10 @@
       }
   
       playerPosition = { x, y };
+
+
     }
+     
   </script>
         <svelte:window on:keydown={movePlayer}/>
  

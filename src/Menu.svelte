@@ -9,11 +9,9 @@
 </script>
 
 <h1 class='menu-titulo'>
-	<div>
-	<span>Maze </span> 
-	<span>of </span>
-	<span>Mystery </span> 
-	</div>
+	
+	Maze of Mystery  
+	
 </h1>
 
 <button class='menu' on:click={() => trocarEstadoDoJogo('ajuda')}>

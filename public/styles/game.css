@@ -9,17 +9,17 @@
     }
   
     .maze-cell {
-      background-image: url('/images/chao.jpeg');
+      background-image: url('/images/chao-mapa1.jpg');
       background-size: 100%;
     }
   
     .wall {
-      background-image: url('/images/parede-mapa1.jpeg');
+      background-image: url('/images/parede-mapa1.jpg');
       background-size: 100%;
     }
   
     .player {
-      background-image: url('/images/thomas-atual.gif');
+      background-image: url('/images/thomas-mapa1.gif');
       background-size: 100%;
     }
     .nivel{

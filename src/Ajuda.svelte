@@ -17,6 +17,7 @@
 		  Arrow down (seta para baixo):para quando quiser que o personagem desça; <br>
 		  Arrow up (seta para cima): quando quiser move-lo para cima. <br></i></b>
 		<img src="/images/akey1.png" alt=""></p>
+		<p> Recomendamos também que utilize o mouse para ajudar a controlar o scroll!</p>
 </div>
 	</main>
 	

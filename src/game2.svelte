@@ -3,12 +3,18 @@
 </svelte:head>
 <h1 class='nivel'>Nível 2</h1>
 <link href="https://fonts.cdnfonts.com/css/the-wild-breath-of-zelda" rel="stylesheet">
-                
-
+       
+<div class="cronometro">
+  FALTAM APENAS {TempoRestante} SEGUNDOS PARA QUE THOMAS SEJA SOTERRADO
+</div>
 <script>
 import VoltarMenu from './VoltarMenu.svelte'
 import {proximaFase} from './mudarFase.js';
 import Swal from 'sweetalert2';
+Swal.fire({
+        title: "ALGO ESTÁ ERRADO!",
+        text: "Thomas está escutando barulhos estranhos, parece que vai desmoronar.Ajude Thomas a sair antes que o tempo acabe!",
+      })
 
     let maze = [
     [1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],//50 linhas e 42 colunas
@@ -75,7 +81,7 @@ import Swal from 'sweetalert2';
       if(maze[y][x] == 3){
         Swal.fire({
         title: "VOCÊ VENCEU!",
-        text: "Agora ajude Thomas na próxima fase!",
+        text: "Falta pouco, Thomas está quase saindo!",
         icon: "success",
       })
       .then(response => {
@@ -85,8 +91,24 @@ import Swal from 'sweetalert2';
       })
       }
     }
+let TempoRestante = 120;
+
+    function perderJogo() {
+Swal.fire({
+  title: "VOCÊ PERDEU!",
+  text: "Thomas morreu.",
+  icon: "error"
+}).then(response => {
+        if(response.isConfirmed){
+          proximaFase(0);
+        }
+        
+      })
+
+    }
   
-    function movePlayer(event) {
+  
+    function moveMapa2(event) {
       const { key } = event;
       let { x, y } = playerPosition;
   
@@ -105,14 +127,29 @@ import Swal from 'sweetalert2';
       }
   
       playerPosition = { x, y };
-    }
+
     
+
+    }
+
+    const timerInterval = setInterval(() => {
+    TempoRestante--;
+
+    if (TempoRestante <= 0) {
+      clearInterval(timerInterval);
+      perderJogo();
+    }
+  }, 1000);
+
+
+
   </script>
-        <svelte:window on:keydown={movePlayer}/>
+  
+        <svelte:window on:keydown={moveMapa2}/>
  
   
   <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-  <div class="maze" on:keydown={movePlayer}>
+  <div class="maze" on:keydown={moveMapa2}>
     {#each maze as row, y}
       {#each row as cell, x}
         <div
@@ -122,7 +159,8 @@ import Swal from 'sweetalert2';
         />
       {/each}
     {/each}
-  </div>
+        </div>
+   
 
 
   <VoltarMenu/>

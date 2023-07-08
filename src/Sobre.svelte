@@ -31,6 +31,8 @@
 		<a href="https://github.com/Wellington6453">
 			Wellington Ramos da Silva
 		</a>
+		<br>
+		<p> OBRIGADA POR JOGAR!</p>
 	</div>
 	<VoltarMenu />
 </main>

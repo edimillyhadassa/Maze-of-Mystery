@@ -1,15 +1,20 @@
 <svelte:head>
 	<link rel="stylesheet" href="/styles/game3.css">
 </svelte:head>
- <h1> Nível 3</h1>
+ <h1 class="nivel"> Nível 3</h1>
  <link href="https://fonts.cdnfonts.com/css/the-wild-breath-of-zelda" rel="stylesheet">
-                
+ <div class="cronometro">
+VOCÊ SÓ TEM APENAS {TempoRestante} SEGUNDOS PARA SALVAR THOMAS.
+</div>              
 
 <script>
 import VoltarMenu from './VoltarMenu.svelte'
 import {proximaFase} from './mudarFase.js';
 import Swal from 'sweetalert2';
-
+Swal.fire({
+        title: "Ufa!",
+        text: "Essa foi por pouco, mas o Thomas ainda corre perigo.",
+      })
     let maze = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],//60 linhas e 61 clunas
     [0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
@@ -94,8 +99,31 @@ import Swal from 'sweetalert2';
       })
       }
     }
+    let TempoRestante = 180;
+
+    function perderJogo() {
+Swal.fire({
+  title: "VOCÊ PERDEU!",
+  text: "Quase conseguimos, mas infelizmente não foi dessa vez.",
+  icon: "error"
+}).then(response => {
+        if(response.isConfirmed){
+          proximaFase(0);
+        }
+        
+      })
+
+    }
+    const timerInterval = setInterval(() => {
+    TempoRestante--;
+
+    if (TempoRestante <= 0) {
+      clearInterval(timerInterval);
+      perderJogo();
+    }
+  }, 1000);
   
-    function movePlayer(event) {
+    function moveMapa3(event) {
       const { key } = event;
       let { x, y } = playerPosition;
   
@@ -117,11 +145,11 @@ import Swal from 'sweetalert2';
     }
     
   </script>
-        <svelte:window on:keydown={movePlayer}/>
+        <svelte:window on:keydown={moveMapa3}/>
  
   
   <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-  <div class="maze" on:keydown={movePlayer}>
+  <div class="maze" on:keydown={moveMapa3}>
     {#each maze as row, y}
       {#each row as cell, x}
         <div
@@ -133,5 +161,9 @@ import Swal from 'sweetalert2';
     {/each}
   </div>
 
+
+
+
+  
 
   <VoltarMenu/>
