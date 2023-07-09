@@ -99,7 +99,7 @@ Swal.fire({
       })
       }
     }
-    let TempoRestante = 180;
+    let TempoRestante = 170;
 
     function perderJogo() {
 Swal.fire({
@@ -148,7 +148,6 @@ Swal.fire({
         <svelte:window on:keydown={moveMapa3}/>
  
   
-  <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
   <div class="maze" on:keydown={moveMapa3}>
     {#each maze as row, y}
       {#each row as cell, x}

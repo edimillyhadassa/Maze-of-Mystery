@@ -7,7 +7,7 @@
 </script>
 
 {#if $proximoNivel == 0}
-    <Game />
+    <Game3 />
 {:else if $proximoNivel == 1}   
     <Game2 />
 {:else if $proximoNivel == 2}

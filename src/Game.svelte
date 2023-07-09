@@ -14,7 +14,7 @@
 
     let maze = [
       [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],  //utilizamos array para formar o labirinto
       [1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1],
       [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1],
       [1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1],
@@ -40,11 +40,11 @@
     ];
     
     let playerPosition = {
-      x: 0,
+      x: 0,        //define as coordenadas do player, onde vai começar
       y: 1
     }; 
-    function chegada(x,y) {
-      if(maze[y][x] === 3){
+    function chegada(x,y) {//função de chegada do labirinto 
+      if(maze[y][x] === 3){  
         Swal.fire({
         title: "VOCÊ VENCEU!",
         text: "Agora ajude Thomas na próxima fase!",
@@ -52,12 +52,12 @@
       })
       .then(response => {
         if(response.isConfirmed){
-          proximaFase(1);
+          proximaFase(1);  //utilizamos para trocar de fase
         }
       })
       }
     }
-  
+  //função para movimentação do personagem, utilizando o evento das arrow keys
     function movePlayer(event) {
       const { key } = event;
       let { x, y } = playerPosition;
@@ -86,7 +86,7 @@
  
       
   
-{#if trocar}
+{#if trocar}  <!--utilizamos para inserir a historia do jogo-->
 <section>
   <div>
     <Historia></Historia>
@@ -95,9 +95,7 @@
   <button class='historia' on:click={() => {trocar = false}} >Próximo</button>
 </section>
 {:else}
-<section>
-  
-  <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+<section>  <!--faz a çeitura do array com foreach, em linhas e colunas-->
   <div class="maze" on:keydown={movePlayer}>
     {#each maze as row, y}
       {#each row as cell, x}
@@ -107,7 +105,7 @@
           }`}
         />
       {/each}
-    {/each}
+    {/each}  <!--também temos a definição das corrdenadas x e y-->
   </div>
 <VoltarMenu/>
 </section>

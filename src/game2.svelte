@@ -5,7 +5,7 @@
 <link href="https://fonts.cdnfonts.com/css/the-wild-breath-of-zelda" rel="stylesheet">
        
 <div class="cronometro">
-  FALTAM APENAS {TempoRestante} SEGUNDOS PARA QUE THOMAS SEJA SOTERRADO
+  FALTAM APENAS {TempoRestante} SEGUNDOS PARA QUE THOMAS SEJA SOTERRADO <!--assim que fazemos o cronometro aparecer-->
 </div>
 <script>
 import VoltarMenu from './VoltarMenu.svelte'
@@ -91,9 +91,9 @@ Swal.fire({
       })
       }
     }
-let TempoRestante = 120;
+let TempoRestante = 120;  //implementamos um cronometro
 
-    function perderJogo() {
+    function perderJogo() { //com a função perder jogo, imitimos um alerta e o jogo se reinicia ao mapa1
 Swal.fire({
   title: "VOCÊ PERDEU!",
   text: "Thomas morreu.",
@@ -139,8 +139,8 @@ Swal.fire({
       clearInterval(timerInterval);
       perderJogo();
     }
-  }, 1000);
-
+  }, 1000); //para o cronometro, utilizamos a função de tempo do js "setinterval" e chamamos a função perder
+            //jogo, para terminar assim que o tempo acabar
 
 
   </script>
@@ -148,7 +148,6 @@ Swal.fire({
         <svelte:window on:keydown={moveMapa2}/>
  
   
-  <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
   <div class="maze" on:keydown={moveMapa2}>
     {#each maze as row, y}
       {#each row as cell, x}

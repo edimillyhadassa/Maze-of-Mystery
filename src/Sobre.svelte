@@ -28,7 +28,7 @@
 			>Júlio César Silva do Nascimento
 		</a>
 		<br />
-		<a href="https://github.com/Wellington6453">
+		<a href="https://github.com/Wellington6453" target="_blank">
 			Wellington Ramos da Silva
 		</a>
 		<br>
