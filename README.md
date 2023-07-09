@@ -8,11 +8,11 @@ Nós ficamos muito felizes em faze-lo. Espero que se divirta!
 Somos estudantes do primeiro período de Informática Para Internet e este é um projeto de conclusão de peíodo da matéria de Lógica de Programação. Agradecemos ao professor Allan pela oportunidade de nos desafiar a algo que nunca tínhamos tentado.
 
 Discentes:
-Alyson Alves
-Edimilly Hadassa
-Elouyse Victoria
-Júlio César
-Wellington Ramos
+Alyson Alves,
+Edimilly Hadassa,
+Elouyse Victoria,
+Júlio César,
+Wellington Ramos.
 
 
 
@@ -20,6 +20,6 @@ Wellington Ramos
 
 Solicitamos que siga este passo:
 1. NPM INSTALL
-2. NPM SWEETALERT (importante para que o jogo se mostre na tela)
+2. NPM INSTALL SWEETALERT (importante para que o jogo se mostre na tela)
 3. NPM RUN DEV
 
