@@ -1,9 +1,9 @@
 <script>
 	// importa os componentes que representam os elementos gráficos do jogo
 	import AllGames from './AllGames.svelte'
-	import Sobre from './Sobre.svelte'
-	import Menu from './Menu.svelte'
-	import Ajuda from './Ajuda.svelte'
+	import Sobre from '../interface-game/Sobre.svelte'
+	import Menu from '../interface-game/Menu.svelte'
+	import Ajuda from '../interface-game/Ajuda.svelte'
 	import Historia from './Historia.svelte'
 
 

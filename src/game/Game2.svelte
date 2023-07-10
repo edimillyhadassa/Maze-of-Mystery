@@ -4,16 +4,14 @@
 <h1 class='nivel'>Nível 2</h1>
 <link href="https://fonts.cdnfonts.com/css/the-wild-breath-of-zelda" rel="stylesheet">
        
-<div class="cronometro">
-  FALTAM APENAS {TempoRestante} SEGUNDOS PARA QUE THOMAS SEJA SOTERRADO <!--assim que fazemos o cronometro aparecer-->
-</div>
+
 <script>
-import VoltarMenu from './VoltarMenu.svelte'
-import {proximaFase} from './mudarFase.js';
+import VoltarMenu from '../interface-game/VoltarMenu.svelte'
+import {proximaFase} from '../Componentes importantes/mudarFase.js';
 import Swal from 'sweetalert2';
 Swal.fire({
-        title: "ALGO ESTÁ ERRADO!",
-        text: "Thomas está escutando barulhos estranhos, parece que vai desmoronar.Ajude Thomas a sair antes que o tempo acabe!",
+        title: "AH NÃO!",
+        text: "Ainda tem muito caminho pela frente, não desista e ajude o Thomas!",
       })
 
     let maze = [
@@ -91,21 +89,6 @@ Swal.fire({
       })
       }
     }
-let TempoRestante = 120;  //implementamos um cronometro
-
-    function perderJogo() { //com a função perder jogo, imitimos um alerta e o jogo se reinicia ao mapa1
-Swal.fire({
-  title: "VOCÊ PERDEU!",
-  text: "Thomas morreu.",
-  icon: "error"
-}).then(response => {
-        if(response.isConfirmed){
-          proximaFase(0);
-        }
-        
-      })
-
-    }
   
   
     function moveMapa2(event) {
@@ -127,20 +110,9 @@ Swal.fire({
       }
   
       playerPosition = { x, y };
-
     
 
     }
-
-    const timerInterval = setInterval(() => {
-    TempoRestante--;
-
-    if (TempoRestante <= 0) {
-      clearInterval(timerInterval);
-      perderJogo();
-    }
-  }, 1000); //para o cronometro, utilizamos a função de tempo do js "setinterval" e chamamos a função perder
-            //jogo, para terminar assim que o tempo acabar
 
 
   </script>
@@ -160,6 +132,3 @@ Swal.fire({
     {/each}
         </div>
    
-
-
-  <VoltarMenu/>

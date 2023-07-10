@@ -1,6 +1,6 @@
 ## SOBRE O JOGO:
 
-Maze of Mystery é um jogo de labirinto simples, basta ajudar Thomas, personagem do jogo, a achar o caminho de saída, o jogo tem três níveis: o primeiro, é mais tranquilo, o segundo e o terceiro são cronometrados.
+Maze of Mystery é um jogo de labirinto simples, basta ajudar Thomas, personagem do jogo, a achar o caminho de saída, o jogo tem três níveis: o primeiro, és tranquilo, o segundo, é um pouco maior, já o terceiro é cronometrado.
 Nós ficamos muito felizes em faze-lo. Espero que se divirta!
 
 

@@ -3,9 +3,6 @@
 	<link rel="stylesheet" href="/styles/historia.css" />
 </svelte:head>
 
-<script>
-    import { proximoNivel } from "./mudarFase";
-</script>
 <main>
 
 <div class="texto-hist"> 

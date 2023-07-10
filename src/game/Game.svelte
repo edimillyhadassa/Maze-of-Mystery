@@ -6,10 +6,10 @@
 
                 
 <script>
-  	import VoltarMenu from './VoltarMenu.svelte'
-    import {proximaFase} from './mudarFase.js';
+  	import VoltarMenu from '../interface-game/VoltarMenu.svelte'
+    import {proximaFase} from '../Componentes importantes/mudarFase.js';
     import Swal from 'sweetalert2';
-    import Historia from './Historia.svelte';
+    import Historia from '../Componentes importantes/Historia.svelte';
   let trocar = true;
 
     let maze = [

@@ -4,16 +4,16 @@
  <h1 class="nivel"> Nível 3</h1>
  <link href="https://fonts.cdnfonts.com/css/the-wild-breath-of-zelda" rel="stylesheet">
  <div class="cronometro">
-VOCÊ SÓ TEM APENAS {TempoRestante} SEGUNDOS PARA SALVAR THOMAS.
-</div>              
+  FALTAM APENAS {TempoRestante} SEGUNDOS PARA QUE THOMAS SEJA SOTERRADO <!--assim que fazemos o cronometro aparecer-->
+</div>            
 
 <script>
-import VoltarMenu from './VoltarMenu.svelte'
-import {proximaFase} from './mudarFase.js';
+import VoltarMenu from '../interface-game/VoltarMenu.svelte'
+import {proximaFase} from '../Componentes importantes/mudarFase.js';
 import Swal from 'sweetalert2';
 Swal.fire({
-        title: "Ufa!",
-        text: "Essa foi por pouco, mas o Thomas ainda corre perigo.",
+        title: "ALGO ESTÁ ERRADO!",
+        text: "Thomas está escutando barulhos estranhos, parece que vai desmoronar.Ajude Thomas a sair antes que o tempo acabe!",
       })
     let maze = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],//60 linhas e 61 clunas
@@ -95,16 +95,17 @@ Swal.fire({
       })
       .then(response => {
         if(response.isConfirmed){
+          proximaFase(0)
         }
       })
       }
     }
-    let TempoRestante = 170;
+    let TempoRestante = 180;
 
     function perderJogo() {
 Swal.fire({
   title: "VOCÊ PERDEU!",
-  text: "Quase conseguimos, mas infelizmente não foi dessa vez.",
+  text: "Thomas morreu.", //função perder jogo para assim reiniciar para fase 1
   icon: "error"
 }).then(response => {
         if(response.isConfirmed){
@@ -114,14 +115,6 @@ Swal.fire({
       })
 
     }
-    const timerInterval = setInterval(() => {
-    TempoRestante--;
-
-    if (TempoRestante <= 0) {
-      clearInterval(timerInterval);
-      perderJogo();
-    }
-  }, 1000);
   
     function moveMapa3(event) {
       const { key } = event;
@@ -143,6 +136,14 @@ Swal.fire({
   
       playerPosition = { x, y };
     }
+    const timerInterval = setInterval(() => {
+    TempoRestante--;
+
+    if (TempoRestante <= 0) {
+      clearInterval(timerInterval);
+      perderJogo(); //utilizamos setinterval do js para implementar o cronometro
+    }
+  }, 1000);
     
   </script>
         <svelte:window on:keydown={moveMapa3}/>
@@ -159,10 +160,3 @@ Swal.fire({
       {/each}
     {/each}
   </div>
-
-
-
-
-  
-
-  <VoltarMenu/>
