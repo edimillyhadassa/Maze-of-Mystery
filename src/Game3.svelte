@@ -8,8 +8,8 @@
 </div>            
 
 <script>
-import VoltarMenu from '../interface-game/VoltarMenu.svelte'
-import {proximaFase} from '../Componentes importantes/mudarFase.js';
+import VoltarMenu from './VoltarMenu.svelte'
+import {proximaFase} from './mudarFase.js';
 import Swal from 'sweetalert2';
 Swal.fire({
         title: "ALGO ESTÁ ERRADO!",
@@ -89,7 +89,7 @@ Swal.fire({
       let { x, y } = playerPosition;
       if(maze[y][x] == 3){
         Swal.fire({
-        title: "VOCÊ VENCEU!",
+        title: "VITÓRIA!",
         text: "Agora o Thomas pode voltar para casa!",
         icon: "success",
       })

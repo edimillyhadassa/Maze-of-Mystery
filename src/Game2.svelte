@@ -6,8 +6,8 @@
        
 
 <script>
-import VoltarMenu from '../interface-game/VoltarMenu.svelte'
-import {proximaFase} from '../Componentes importantes/mudarFase.js';
+import VoltarMenu from './VoltarMenu.svelte'
+import {proximaFase} from './mudarFase.js';
 import Swal from 'sweetalert2';
 Swal.fire({
         title: "AH NÃO!",

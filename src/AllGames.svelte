@@ -1,7 +1,7 @@
 <script>
-    import Game from '../game/Game.svelte';
-    import Game2 from '../game/Game2.svelte';
-    import Game3 from '../game/Game3.svelte';
+    import Game from './Game.svelte';
+    import Game2 from './Game2.svelte';
+    import Game3 from './Game3.svelte';
     import {proximoNivel, proximaFase} from './mudarFase.js';
     proximaFase(0)
 </script>

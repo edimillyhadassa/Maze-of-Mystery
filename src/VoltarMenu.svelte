@@ -1,5 +1,5 @@
 <script>
-	import { trocarEstadoDoJogo } from '../Componentes importantes/Estado.js'
+	import { trocarEstadoDoJogo } from './Estado.js'
 </script>
 
 <button class='menu' on:click={() => trocarEstadoDoJogo('menu')}>

@@ -4,8 +4,8 @@
 </svelte:head>
 
 <script>
-	import { estado } from '../Componentes importantes/Estado.js'
-	import { trocarEstadoDoJogo } from '../Componentes importantes/Estado.js'
+	import { estado } from './Estado.js'
+	import { trocarEstadoDoJogo } from './Estado.js'
 </script>
 
 <h1 class='menu-titulo'>
