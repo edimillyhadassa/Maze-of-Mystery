@@ -82,7 +82,7 @@
     }
      
   </script>
-        <svelte:window on:keydown={movePlayer}/>
+        <svelte:window on:keydown={movePlayer}/> 
  
       
   
@@ -95,7 +95,7 @@
   <button class='historia' on:click={() => {trocar = false}} >Próximo</button>
 </section>
 {:else}
-<section>  <!--faz a çeitura do array com foreach, em linhas e colunas-->
+<section>  <!--faz a leitura do array com foreach, em linhas e colunas-->
   <div class="maze" on:keydown={movePlayer}>
     {#each maze as row, y}
       {#each row as cell, x}

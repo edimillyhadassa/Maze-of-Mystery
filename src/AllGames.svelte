@@ -6,7 +6,7 @@
     proximaFase(0)
 </script>
 
-{#if $proximoNivel == 0}
+{#if $proximoNivel == 0} <!--utilizamos para definir as fases-->
     <Game />
 {:else if $proximoNivel == 1}   
     <Game2 />
